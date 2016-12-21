@@ -624,6 +624,7 @@ class EventManager(object):
                 EventMapping.objects.create(
                     project=project, group=group, event_id=event_id)
         except IntegrityError:
+            raise
             self.logger.info('duplicate.found', extra={'event_id': event.id}, exc_info=True)
             return event
 

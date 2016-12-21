@@ -22,7 +22,6 @@ class ReleaseFileDetailsTest(APITestCase):
 
         releasefile = ReleaseFile.objects.create(
             organization_id=project.organization_id,
-            project=project,
             release=release,
             file=File.objects.create(
                 name='application.js',
@@ -58,7 +57,6 @@ class ReleaseFileUpdateTest(APITestCase):
 
         releasefile = ReleaseFile.objects.create(
             organization_id=project.organization_id,
-            project=project,
             release=release,
             file=File.objects.create(
                 name='application.js',
@@ -100,7 +98,6 @@ class ReleaseFileDeleteTest(APITestCase):
 
         releasefile = ReleaseFile.objects.create(
             organization_id=project.organization_id,
-            project=project,
             release=release,
             file=File.objects.create(
                 name='application.js',
